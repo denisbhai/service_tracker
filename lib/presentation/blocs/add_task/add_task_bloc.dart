@@ -13,7 +13,7 @@ class AddTaskBloc extends Bloc<AddTaskEvent, AddTaskState> {
 
   AddTaskBloc({required CreateTaskUseCase createTaskUseCase})
       : _createTaskUseCase = createTaskUseCase,
-        super( AddTaskState()) {
+        super(AddTaskState()) {
     on<AddTaskPriorityChanged>(_onPriorityChanged);
     on<AddTaskDueDateChanged>(_onDueDateChanged);
     on<AddTaskSubmitted>(_onSubmitted);
